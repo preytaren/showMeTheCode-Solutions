@@ -10,8 +10,8 @@ def word_count(filename):
         for line in fp:
             for word in WORD_PATTERN.finditer(line):
                 words.append(word)
-    return len(words)
+    return len(words), words
 
 
 if __name__ == '__main__':
-    print word_count('test.txt')
+    print word_count('test.txt')[0]
