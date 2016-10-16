@@ -47,4 +47,4 @@ def compose_two_image(base, upper, pos):
 
 
 if __name__ == '__main__':
-    add_num('test.jpeg', 12).show()
+    add_num('test/q0.jpeg', 12).show()

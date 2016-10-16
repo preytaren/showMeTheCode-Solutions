@@ -14,4 +14,4 @@ def word_count(filename):
 
 
 if __name__ == '__main__':
-    print word_count('test.txt')[0]
+    print word_count('test/q4.txt')[0]
