@@ -44,12 +44,17 @@ def draw_letters(base, letters):
     return base
 
 
-def new_image():
+def bg_image():
     return Image.new('RGBA', (100, 30), color='#ffffff')
+    """
+    image = Image.open('test/q10.jpg')
+    image = image.filter(ImageFilter.SMOOTH_MORE)
+    return image
+    """
 
 
 def generate_code():
-    image = new_image()
+    image = bg_image()
     text = random_text(4)
     output = draw_letters(image, text)
     output.show()
