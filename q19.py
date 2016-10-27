@@ -20,7 +20,7 @@ def run():
     number_data = json.dumps(data, indent=4, ensure_ascii=False)
 
     document = dom.Document()
-    document.encoding = 'utf-8'
+    document.toxml('utf-8')
     root = document.createElement('root')
     comment = document.createComment(u'{space}    数字信息    {space}'.format(space=os.linesep))
     numbers = document.createElement('numbers')
