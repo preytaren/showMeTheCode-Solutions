@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        .header,.footer,.content,body,input{
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            font-size: 20px;
+        }
+        .header,.footer {
+            background-color: aquamarine;
+            height: 10%;
+        }
+
+        .form {
+            background-color: mediumseagreen;
+        }
+
+        .message {
+            background-color: darkgray;
+        }
+        .vertical {
+            vertical-align: 1px;
+        }
+
+        ul,li {
+            list-style: none;
+        }
+    </style>
+    <title>留言簿</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>留言簿</h1>
+        </div>
+        <div class="content">
+            <div class="form">
+                <p>请尽情留言吧</p>
+                <form action="." method="post">
+                    <div class="vertical"><label>姓名 <input type="text" name="username"></label></div>
+                    <div class="vertical"><label>内容 <textarea class="vertical" name="message" rows="5" cols="50"></textarea></label></div>
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="history">
+                <h2>留言历史信息</h2>
+                {% for history in historys %}
+                <ul>
+                    <li>{{ history.username }}    留言于({{ history.time }})</li>
+                    <li class="message">{{ history.message }}</li>
+                </ul>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="footer">
+        </div>
+    </div>
+</body>
+</html>
